@@ -1,0 +1,31 @@
+<%- include("partials/header")%>
+
+    <!-- <h1>Home</h1>
+    <p>
+         content%>
+    </p> -->
+    <div class="blognest">
+        <h1><b>BlogNest</b>: Nurturing your <i>thoughts!</i></h1>
+        <p>Your digital haven for thought-provoking content and creative expression!</p>
+        <form method="GET" action="/compose">
+            <button class="but">Compose</button>
+        </form>
+
+    </div>
+
+    <% if(locals.posts){%>
+        <h1 class="post topic">Recent Blogs</h1>
+        <%posts.forEach((post)=>{%>
+            <div class="content">
+                <h1 class="title">
+
+                    <%= post.title%>
+                </h1>
+                <p>
+                    <%=post.content.substring(0,100)%>...<a href="/posts/<%= encodeURIComponent(post.title) %>"> Read
+                            More</a>
+                </p>
+            </div>
+            <%})%>
+                <%}%>
+                    <%- include("partials/footer")%>

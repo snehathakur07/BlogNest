@@ -1,0 +1,22 @@
+</div>
+<div class="footer-padding"></div>
+<div class="footer">
+  <p>Made with ❤️</p>
+</div>
+</div>
+<script>
+  document.querySelectorAll(".but").forEach((button) => {
+
+    button.addEventListener("click", () => {
+      button.classList.add("clicked")
+      setTimeout(() => {
+        button.classList.remove("clicked")
+      }, 300)
+    })
+  })
+
+
+</script>
+</body>
+
+</html>
